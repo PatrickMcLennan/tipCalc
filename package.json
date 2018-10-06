@@ -1,0 +1,20 @@
+{
+  "name": "tipcalc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "watch:sass": "node-sass main.scss style.css -w",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' style.css -o style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "node-sass": "^4.9.3",
+    "postcss-cli": "^6.0.0"
+  }
+}
