@@ -16,10 +16,13 @@ body {
   width: 100vw; }
 
 fieldset {
-  height: 50vh;
-  width: 50vw;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-content: space-evenly;
   align-items: center; }
+
+.results {
+  flex: 1;
+  background: orangered; }
