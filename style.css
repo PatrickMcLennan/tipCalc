@@ -1,3 +1,10 @@
+/*
+$BREAKPOINT ARGUMENT CHOICES:
+ - phone
+ - tab-port
+ - tab-land
+ - big-desktop
+ */
 *,
 *::before,
 *::after {
@@ -14,15 +21,20 @@ body {
   flex-flow: row wrap;
   height: 100vh;
   width: 100vw; }
+  @media only screen and (max-width: 75em) {
+    body {
+      flex-direction: column; } }
 
-fieldset {
+form {
   flex: 1;
   display: flex;
+  border: 1px solid black;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-content: space-evenly;
   align-items: center; }
 
 .results {
   flex: 1;
+  min-width: 50vw;
   background: orangered; }
