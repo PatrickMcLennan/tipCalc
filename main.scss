@@ -9,6 +9,7 @@
   box-sizing: inherit;
   font-family: 'Lato';
   color: white;
+  // filter: drop-shadow(.5rem .5rem .25rem black);
 }
 html {
   font-size: 62.5%;
@@ -39,20 +40,50 @@ form,
   align-items: center;
   align-content: space-evenly;
   position: relative;
+
 }
+
 .header {
   position: absolute;
   top: 10vh;
-  left: 10vw;
+  left: 5vw;
   @include headerMain;
 }
+
 label {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  justify-content: flex-end;
+  flex: 1;
   text-align: center;
+  @include label;
 }
-input,
+
+input {
+  @include inputs;
+  background: none;
+  border: none;
+  border-bottom: 1px solid white;
+
+  &:focus {
+    outline: white;
+  }
+}
+
 select {
-  margin: 1rem 0;
+  background: none;
+  padding: 1rem 2rem;
+  margin-top: 1.5rem;
+  border: none;
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: .2rem;
+}
+
+button {
+  margin: 5rem 0;
+
+  @include respond(tab-land) {
+    margin-bottom: none;
+  }
 }
