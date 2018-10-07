@@ -100,7 +100,15 @@ button {
   letter-spacing: .35rem;
   background: none;
   border-radius: 2.5%;
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
+  button:hover {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05); }
+  button:active {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
 
 .results h3 {
   font-weight: 300;
@@ -126,8 +134,7 @@ button {
   flex: 1;
   flex-direction: column;
   justify-content: space-evenly;
-  list-style-type: none;
-  border: 1px solid white; }
+  list-style-type: none; }
 
 .results li {
   font-size: 2rem;

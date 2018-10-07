@@ -99,6 +99,15 @@ button {
   background: none;
   border-radius: 2.5%;
   padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
 }
   // RESULTS
 .results {
@@ -121,15 +130,12 @@ button {
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
-    border: 1px solid white;
   }
   & li {
     @include info;
     list-style-type: none;
   }
 }
-
-
 
 sup {
   font-size: 1rem;
