@@ -26,12 +26,21 @@ function getTip(service) {
   }
   return tipPercent;
 }
-function getTotals() {
+function getTotalShare() {
   const totalNum = parseInt(DOM.inputTotal.value);
   const payeesNum = parseInt(DOM.inputPeople.value);
   const tip = getTip(DOM.inputService.value);
   const total = ((totalNum * tip) + totalNum) / payeesNum;
-  console.log(total);
+  return total;
 }
-
+function getTotalBase() {
+  const totalNum = parseInt(DOM.inputTotal.value);
+  const payeesNum = parseInt(DOM.inputPeople.value);
+  const total = totalNum / payeesNum;
+  return total;
+}
+function getTotals() {
+  getTotalShare();
+  getTotalBase();
+}
 DOM.button.addEventListener('click', getTotals);
