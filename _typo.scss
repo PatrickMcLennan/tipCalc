@@ -29,5 +29,7 @@
   font-style: italic;
 }
 @mixin info {
-
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: .25rem;
 }

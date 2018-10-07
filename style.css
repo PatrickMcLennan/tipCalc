@@ -43,7 +43,8 @@ form,
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  filter: drop-shadow(1rem 1rem 0.5rem black);
+  -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+          filter: drop-shadow(1rem 1rem 0.5rem black);
   position: absolute;
   top: 7.5vh;
   left: 5vw; }
@@ -54,7 +55,8 @@ label {
   font-style: italic;
   font-weight: 300;
   letter-spacing: .35rem;
-  filter: drop-shadow(1rem 1rem 0.5rem black);
+  -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+          filter: drop-shadow(1rem 1rem 0.5rem black);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -66,7 +68,8 @@ input {
   text-align: right;
   letter-spacing: .75rem;
   padding: 1.5rem 3rem;
-  filter: drop-shadow(1rem 1rem 0.5rem black);
+  -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+          filter: drop-shadow(1rem 1rem 0.5rem black);
   background: none;
   border: none;
   border-bottom: 1px solid white;
@@ -92,18 +95,26 @@ select {
 
 .results {
   border: 1px solid white; }
-
-h3 {
-  font-weight: 300;
-  font-size: 3rem;
-  text-transform: uppercase;
-  letter-spacing: .3rem;
-  font-style: italic; }
-  h3 sup {
+  .results h3 {
+    font-weight: 300;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    font-style: italic; }
+  .results sup {
     font-size: 2rem; }
-  h3 ul {
+  .results ul {
     display: flex;
-    border: 1px solid black; }
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: 1px solid black;
+    list-style-type: none; }
+  .results li {
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: .25rem;
+    list-style-type: none;
+    margin: 1rem 0; }
 
 span {
   font-weight: 100;

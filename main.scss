@@ -97,17 +97,25 @@ select {
   // RESULTS
 .results {
   border: 1px solid white;
-}
-h3 {
-  @include shareTotal;
 
+  & h3 {
+    @include shareTotal;
+  }
   & sup {
     font-size: 2rem;
   }
 
   & ul {
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     border: 1px solid black;
+    list-style-type: none;
+  }
+  & li {
+    @include info;
+    list-style-type: none;
+    margin: 1rem 0;
   }
 }
 
