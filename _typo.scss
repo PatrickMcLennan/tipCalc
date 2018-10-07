@@ -26,6 +26,7 @@
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: .35rem;
+  filter: drop-shadow(1rem 1rem .5rem black);
 }
 @mixin shareTotal {
   font-weight: 300;
@@ -33,6 +34,7 @@
   text-transform: uppercase;
   letter-spacing: .3rem;
   font-style: italic;
+  filter: drop-shadow(1rem 1rem .5rem black);
 }
 @mixin response {
   font-size: 2rem;
@@ -41,9 +43,11 @@
   text-transform: uppercase;
   letter-spacing: 1rem;
   color: rgba(white, .5);
+  filter: drop-shadow(1rem 1rem .5rem black);
 }
 @mixin info {
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: .25rem;
+  filter: drop-shadow(1rem 1rem .5rem black);
 }

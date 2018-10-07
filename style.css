@@ -98,6 +98,8 @@ button {
   font-weight: 100;
   text-transform: uppercase;
   letter-spacing: .35rem;
+  -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+          filter: drop-shadow(1rem 1rem 0.5rem black);
   background: none;
   border-radius: 2.5%;
   padding: 1rem 2rem;
@@ -116,6 +118,8 @@ button {
   text-transform: uppercase;
   letter-spacing: .3rem;
   font-style: italic;
+  -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+          filter: drop-shadow(1rem 1rem 0.5rem black);
   flex: 1; }
 
 .results__response {
@@ -125,6 +129,8 @@ button {
   text-transform: uppercase;
   letter-spacing: 1rem;
   color: rgba(255, 255, 255, 0.5);
+  -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+          filter: drop-shadow(1rem 1rem 0.5rem black);
   margin-left: 1rem;
   align-self: flex-start;
   flex: 1; }
@@ -140,6 +146,8 @@ button {
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: .25rem;
+  -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+          filter: drop-shadow(1rem 1rem 0.5rem black);
   list-style-type: none; }
 
 sup {
