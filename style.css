@@ -93,12 +93,22 @@ select {
   letter-spacing: .2rem;
   margin-top: 5rem; }
 
+button {
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .35rem;
+  background: none;
+  border-radius: 2.5%;
+  padding: 1rem 2rem; }
+
 .results h3 {
   font-weight: 300;
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: .3rem;
-  font-style: italic; }
+  font-style: italic;
+  flex: 1; }
 
 .results__response {
   font-size: 2rem;
@@ -108,20 +118,22 @@ select {
   letter-spacing: 1rem;
   color: rgba(255, 255, 255, 0.5);
   margin-left: 1rem;
-  align-self: flex-start; }
+  align-self: flex-start;
+  flex: 1; }
 
 .results ul {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: space-evenly;
-  list-style-type: none; }
+  list-style-type: none;
+  border: 1px solid white; }
 
 .results li {
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: .25rem;
-  list-style-type: none;
-  margin: 1rem 0; }
+  list-style-type: none; }
 
 sup {
   font-size: 1rem; }

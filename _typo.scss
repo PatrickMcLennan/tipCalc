@@ -21,6 +21,12 @@
   padding: 1.5rem 3rem;
   filter: drop-shadow(1rem 1rem .5rem black);
 }
+@mixin button {
+  font-size: 2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: .35rem;
+}
 @mixin shareTotal {
   font-weight: 300;
   font-size: 3rem;

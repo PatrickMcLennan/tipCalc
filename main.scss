@@ -94,29 +94,38 @@ select {
   margin-top: 5rem;
 }
 
+button {
+  @include button;
+  background: none;
+  border-radius: 2.5%;
+  padding: 1rem 2rem;
+}
   // RESULTS
 .results {
 
   & h3 {
     @include shareTotal;
+    flex: 1;
   }
 
   &__response {
     @include response;
     margin-left: 1rem;
     align-self: flex-start;
+    flex: 1;
   }
 
   & ul {
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
+    border: 1px solid white;
   }
   & li {
     @include info;
     list-style-type: none;
-    margin: 1rem 0;
   }
 }
 
