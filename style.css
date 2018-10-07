@@ -10,7 +10,9 @@ $BREAKPOINT ARGUMENT CHOICES:
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+  font-family: 'Lato';
+  color: white; }
 
 html {
   font-size: 62.5%;
@@ -20,21 +22,36 @@ body {
   display: flex;
   flex-flow: row wrap;
   height: 100vh;
-  width: 100vw; }
+  width: 100vw;
+  background: linear-gradient(to right, #8e0e00, #1f1c18); }
   @media only screen and (max-width: 75em) {
     body {
-      flex-direction: column; } }
+      flex-direction: column;
+      background: linear-gradient(to right bottom, #8e0e00, #1f1c18); } }
 
-form {
-  flex: 1;
-  display: flex;
-  border: 1px solid black;
-  flex-direction: column;
-  justify-content: center;
-  align-content: space-evenly;
-  align-items: center; }
-
+form,
 .results {
   flex: 1;
-  min-width: 50vw;
-  background: orangered; }
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-evenly;
+  position: relative; }
+
+.header {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  font-size: 4rem;
+  font-weight: 100; }
+
+label {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  text-align: center; }
+
+input,
+select {
+  margin: 1rem 0; }

@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="main.js" defer></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Tip Calculator</title>
 </head>
 <body>
 
     <form action="#">
-
+      <h2 class="header">Pony Up</h2>
       <label for="total">
         How much was the total bill?
         <input type="number" class="total">
@@ -20,7 +21,7 @@
       <label for="service">
         How was the service?
         <select class="service">
-          <option value="best">Best I've ever had!</option>
+          <option value="best">Legendary</option>
           <option value="good">Great</option>
           <option value="average">Standard.  Good.</option>
           <option value="bad">Sub-par but got there in the end</option>
@@ -33,11 +34,18 @@
         <input type="number" class="people">
       </label>
 
+      <button action="submit">Hit me</button>
+
     </form>
 
   <div class="results">
-    <h3>Here's the deal:</h4>
-      <h4>On a total bill of <span>$134.43</span></h4>
+
+    <h3 class="header">Here's the deal:</h4>
+
+      <h5>Your share of <span class="billTotal"></span> is <span class="share"></span></h5>
+
+
+
   </div>
 </body>
 </html>

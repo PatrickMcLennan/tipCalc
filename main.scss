@@ -1,4 +1,5 @@
 @import 'queries';
+@import 'typo';
 
 *,
 *::before,
@@ -6,6 +7,8 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
+  font-family: 'Lato';
+  color: white;
 }
 html {
   font-size: 62.5%;
@@ -16,23 +19,40 @@ body {
   flex-flow: row wrap;
   height: 100vh;
   width: 100vw;
+  // background: linear-gradient(to right, #eb5757, #000000);
+  // background: linear-gradient(to right, #16222a, #3a6073);
+  // background: linear-gradient(to right, #52c234, #061700);
+  background: linear-gradient(to right, #8e0e00, #1f1c18);
 
   @include respond(tab-land) {
     flex-direction: column;
+    background: linear-gradient(to right bottom, #8e0e00, #1f1c18);
   }
 }
-form {
-  flex: 1;
-  display: flex;
-  border: 1px solid black;
-  flex-direction: column;
-  justify-content: center;
-  align-content: space-evenly;
-  align-items: center;
-}
 
+form,
 .results {
   flex: 1;
-  min-width: 50vw;
-  background: orangered;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: space-evenly;
+  position: relative;
+}
+.header {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  @include headerMain;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  text-align: center;
+}
+input,
+select {
+  margin: 1rem 0;
 }
