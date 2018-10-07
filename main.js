@@ -27,7 +27,9 @@ function getTip(service) {
   return tipPercent;
 }
 function getTotal(total, payees) {
-  return ((total.value * getTip(DOM.inputService) + total.value) / payees.value);
+  const totalNum = parseInt(total.value);
+  const payeesNum = parseInt(payees.value);
+  return ((totalNum * getTip(DOM.inputService) + totalNum) / payeesNum);
 }
 
-DOM.button.addEventListener('click', () => console.log(typeof DOM.inputTotal.value));
+DOM.button.addEventListener('click', getTotal(DOM.inputTotal, DOM.inputPeople));
