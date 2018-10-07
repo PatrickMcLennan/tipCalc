@@ -93,28 +93,38 @@ select {
   letter-spacing: .2rem;
   margin-top: 5rem; }
 
-.results {
-  border: 1px solid white; }
-  .results h3 {
-    font-weight: 300;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-    font-style: italic; }
-  .results sup {
-    font-size: 2rem; }
-  .results ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    border: 1px solid black;
-    list-style-type: none; }
-  .results li {
-    font-size: 2rem;
-    font-weight: 100;
-    letter-spacing: .25rem;
-    list-style-type: none;
-    margin: 1rem 0; }
+.results h3 {
+  font-weight: 300;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  font-style: italic; }
+
+.results__response {
+  font-size: 2rem;
+  font-weight: 100;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 1rem;
+  align-self: flex-start; }
+
+.results ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  list-style-type: none; }
+
+.results li {
+  font-size: 2rem;
+  font-weight: 100;
+  letter-spacing: .25rem;
+  list-style-type: none;
+  margin: 1rem 0; }
+
+sup {
+  font-size: 1rem; }
 
 span {
   font-weight: 100;

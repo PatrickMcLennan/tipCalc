@@ -96,20 +96,21 @@ select {
 
   // RESULTS
 .results {
-  border: 1px solid white;
 
   & h3 {
     @include shareTotal;
   }
-  & sup {
-    font-size: 2rem;
+
+  &__response {
+    @include response;
+    margin-left: 1rem;
+    align-self: flex-start;
   }
 
   & ul {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    border: 1px solid black;
     list-style-type: none;
   }
   & li {
@@ -121,6 +122,9 @@ select {
 
 
 
+sup {
+  font-size: 1rem;
+}
 span {
   font-weight: 100;
   position: relative;
