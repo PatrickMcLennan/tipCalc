@@ -46,9 +46,8 @@ form,
   align-content: space-evenly;
   position: relative;
   padding: 20vh 3vw 10vh 3vw;
-
 }
-
+  //  FORM
 .header {
   @include headerMain;
   position: absolute;
@@ -92,4 +91,31 @@ select {
   font-size: 2rem;
   font-weight: 100;
   letter-spacing: .2rem;
+  margin-top: 5rem;
+}
+
+  // RESULTS
+.results {
+  border: 1px solid white;
+}
+h3 {
+  @include shareTotal;
+
+  & sup {
+    font-size: 2rem;
+  }
+}
+.billTotal {
+  font-weight: 100;
+  position: relative;
+
+  &::after {
+    height: 1px;
+    width: 100%;
+    background: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
