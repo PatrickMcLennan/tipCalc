@@ -57,5 +57,4 @@ function domChanges() {
   DOM.responseTip.innerText = getTotalTip();
 }
 
-
 DOM.button.addEventListener('click', domChanges);
