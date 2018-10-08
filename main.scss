@@ -30,7 +30,7 @@ body {
   // background: linear-gradient(to right, #52c234, #061700);
   background: linear-gradient(to right, #8e0e00, #1f1c18);
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
     flex-direction: column;
     background: linear-gradient(to right bottom, #8e0e00, #1f1c18);
   }
@@ -46,7 +46,11 @@ form,
   align-items: center;
   align-content: space-evenly;
   padding: 20vh 3vw 10vh 3vw;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  @include respond(tab-port) {
+    padding: 5vh 3vw;
+  }
 }
 .results {
   display: none;

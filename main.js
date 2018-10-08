@@ -1,6 +1,7 @@
 'use strict';
 
 const DOM = {
+  form: document.querySelector('form'),
   inputTotal: document.querySelector('.inputTotal'),
   inputService: document.querySelector('.service'),
   inputPeople: document.querySelector('.inputPeople'),
@@ -29,24 +30,24 @@ function rateService(service) {
 }
 
 function getTotalShare() {
-  const totalNum = parseInt(DOM.inputTotal.value);
-  const payeesNum = parseInt(DOM.inputPeople.value);
+  const totalNum = parseInt(DOM.inputTotal.value, 10).toFixed(2);
+  const payeesNum = parseInt(DOM.inputPeople.value, 10);
   const tip = rateService(DOM.inputService.value);
   const total = ((totalNum * tip) + totalNum) / payeesNum;
   return total.toFixed(2);
 }
 
 function getTotalBase() {
-  const totalNum = parseInt(DOM.inputTotal.value);
-  const payeesNum = parseInt(DOM.inputPeople.value);
+  const totalNum = parseInt(DOM.inputTotal.value, 10).toFixed(2);
+  const payeesNum = parseInt(DOM.inputPeople.value, 10);
   const total = totalNum / payeesNum;
   return total.toFixed(2);
 }
 
 function getTotalTip() {
-  const totalNum = parseInt(DOM.inputTotal.value);
+  const totalNum = parseInt(DOM.inputTotal.value, 10).toFixed(2);
   const tip = rateService(DOM.inputService.value);
-  const payeesNum = parseInt(DOM.inputPeople.value);
+  const payeesNum = parseInt(DOM.inputPeople.value, 10);
   const total = (totalNum * tip) / payeesNum;
   return total.toFixed(2);
 }
