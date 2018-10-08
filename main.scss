@@ -82,6 +82,9 @@ input {
   &:focus {
     outline: white;
   }
+  &::placeholder {
+    @include placeholders;
+  }
 }
 
 select {

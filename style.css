@@ -83,6 +83,32 @@ input {
     color: white; }
   input:focus {
     outline: white; }
+  input::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: .5rem;
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+            filter: drop-shadow(1rem 1rem 0.5rem black); }
+  input::-ms-input-placeholder {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: .5rem;
+    color: rgba(255, 255, 255, 0.4);
+    filter: drop-shadow(1rem 1rem 0.5rem black); }
+  input::placeholder {
+    text-transform: uppercase;
+    font-size: 1.75rem;
+    font-weight: 100;
+    font-style: italic;
+    letter-spacing: .5rem;
+    color: rgba(255, 255, 255, 0.4);
+    -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
+            filter: drop-shadow(1rem 1rem 0.5rem black); }
 
 select {
   background: none;

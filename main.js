@@ -11,7 +11,7 @@ const DOM = {
   responseTip: document.querySelector('.totalTip'),
 };
 
-function getTip(service) {
+function rateService(service) {
   let tipPercent;
   if (service === 'terrible') {
     tipPercent = 0;
@@ -30,23 +30,25 @@ function getTip(service) {
 function getTotalShare() {
   const totalNum = parseInt(DOM.inputTotal.value);
   const payeesNum = parseInt(DOM.inputPeople.value);
-  const tip = getTip(DOM.inputService.value);
+  const tip = rateService(DOM.inputService.value);
   const total = ((totalNum * tip) + totalNum) / payeesNum;
-  return total;
+  console.log(totalNum);
+  return total.toFixed(2);
 }
 
 function getTotalBase() {
   const totalNum = parseInt(DOM.inputTotal.value);
   const payeesNum = parseInt(DOM.inputPeople.value);
   const total = totalNum / payeesNum;
-  return total;
+  return total.toFixed(2);
 }
 
 function getTotalTip() {
   const totalNum = parseInt(DOM.inputTotal.value);
-  const tip = getTip(DOM.inputService.value);
-  const total = totalNum * tip;
-  return total;
+  const tip = rateService(DOM.inputService.value);
+  const payeesNum = parseInt(DOM.inputPeople.value);
+  const total = (totalNum * tip) / payeesNum;
+  return total.toFixed(2);
 }
 
 function domChanges() {

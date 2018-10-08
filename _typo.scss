@@ -21,6 +21,15 @@
   padding: 1.5rem 3rem;
   filter: drop-shadow(1rem 1rem .5rem black);
 }
+@mixin placeholders {
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  font-weight: 100;
+  font-style: italic;
+  letter-spacing: .5rem;
+  color: rgba(white, .4);
+  filter: drop-shadow(1rem 1rem .5rem black);
+}
 @mixin button {
   font-size: 2rem;
   font-weight: 100;
