@@ -30,7 +30,7 @@ function rateService(service) {
 }
 
 function getTotalShare() {
-  const totalNum = parseInt(DOM.inputTotal.value, 10).toFixed(2);
+  const totalNum = parseInt(DOM.inputTotal.value, 10);
   const payeesNum = parseInt(DOM.inputPeople.value, 10);
   const tip = rateService(DOM.inputService.value);
   const total = ((totalNum * tip) + totalNum) / payeesNum;
@@ -54,7 +54,7 @@ function getTotalTip() {
 
 function getResponse() {
   const total = getTotalShare();
-  const expensive = ['Ouch', 'What much money do you make?!', 'High roller, eh?'];
+  const expensive = ['Ouch', 'How much money do you make?!', 'High roller, eh?'];
   const reasonable = ['Not bad', 'You wont break the bank with this', 'Reasonable'];
   const cheap = ['You seriously needed a calculator for this?', 'Are you splitting a Mcdonalds order?', 'Live a little next time'];
 
@@ -68,8 +68,10 @@ function getResponse() {
 }
 
 function showResults() {
-  const {results: results, form: form} = DOM;
-
+  const { results: results, form: form } = DOM;
+  results.style.display = 'flex';
+  results.style.transform = 'scaleX(1)';
+  results.style.opacity = '1';
 }
 
 function domChanges() {
