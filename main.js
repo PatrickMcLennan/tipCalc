@@ -51,6 +51,7 @@ function getTotalTip() {
   const total = (totalNum * tip) / payeesNum;
   return total.toFixed(2);
 }
+
 function getResponse() {
   const total = getTotalShare();
   const expensive = ['Ouch', 'What much money do you make?!', 'High roller, eh?'];
@@ -65,11 +66,10 @@ function getResponse() {
     DOM.responseComment.innerText = expensive[Math.floor(Math.random() * expensive.length)];
   }
 }
+
 function showResults() {
-  const results = DOM.results;
-  results.style.display = 'flex';
-  results.style.transform = 'scaleX(1)';
-  results.style.opacity = '1';
+  const {results: results, form: form} = DOM;
+
 }
 
 function domChanges() {
