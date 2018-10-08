@@ -26,6 +26,7 @@ function getTip(service) {
   }
   return tipPercent;
 }
+
 function getTotalShare() {
   const totalNum = parseInt(DOM.inputTotal.value);
   const payeesNum = parseInt(DOM.inputPeople.value);
@@ -33,14 +34,26 @@ function getTotalShare() {
   const total = ((totalNum * tip) + totalNum) / payeesNum;
   return total;
 }
+
 function getTotalBase() {
   const totalNum = parseInt(DOM.inputTotal.value);
   const payeesNum = parseInt(DOM.inputPeople.value);
   const total = totalNum / payeesNum;
   return total;
 }
-function getTotals() {
-  getTotalShare();
-  getTotalBase();
+
+function getTotalTip() {
+  const totalNum = parseInt(DOM.inputTotal.value);
+  const tip = getTip(DOM.inputService.value);
+  const total = totalNum * tip;
+  return total;
 }
-DOM.button.addEventListener('click', getTotals);
+
+function domChanges() {
+  DOM.responseShare.innerText = getTotalShare();
+  DOM.responseBase.innerText = getTotalBase();
+  DOM.responseTip.innerText = getTotalTip();
+}
+
+
+DOM.button.addEventListener('click', domChanges);
