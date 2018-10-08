@@ -32,7 +32,6 @@ function getTotalShare() {
   const payeesNum = parseInt(DOM.inputPeople.value);
   const tip = rateService(DOM.inputService.value);
   const total = ((totalNum * tip) + totalNum) / payeesNum;
-  console.log(totalNum);
   return total.toFixed(2);
 }
 
