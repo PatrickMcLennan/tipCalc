@@ -5,6 +5,7 @@ const DOM = {
   inputService: document.querySelector('.service'),
   inputPeople: document.querySelector('.inputPeople'),
   button: document.querySelector('button'),
+  results: document.querySelector('.results'),
   responseShare: document.querySelector('.totalShare'),
   responseComment: document.querySelector('.results__response'),
   responseBase: document.querySelector('.totalBase'),
@@ -63,11 +64,19 @@ function getResponse() {
     DOM.responseComment.innerText = expensive[Math.floor(Math.random() * expensive.length)];
   }
 }
+function showResults() {
+  const results = DOM.results;
+  results.style.display = 'flex';
+  results.style.transform = 'scaleX(1)';
+  results.style.opacity = '1';
+}
+
 function domChanges() {
   DOM.responseShare.innerText = getTotalShare();
   DOM.responseBase.innerText = getTotalBase();
   DOM.responseTip.innerText = getTotalTip();
   getResponse();
+  showResults();
 }
 
 DOM.button.addEventListener('click', domChanges);
