@@ -31,11 +31,11 @@ form,
 .results {
   flex: 1;
   display: flex;
+  position: relative;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   align-content: space-evenly;
-  position: relative;
   padding: 20vh 3vw 10vh 3vw;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
 
@@ -53,8 +53,8 @@ form,
   -webkit-filter: drop-shadow(1rem 1rem 0.5rem black);
           filter: drop-shadow(1rem 1rem 0.5rem black);
   position: absolute;
-  top: 7.5vh;
-  left: 5vw; }
+  top: 5vh;
+  left: 3vw; }
 
 label {
   font-size: 2rem;
