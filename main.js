@@ -49,11 +49,25 @@ function getTotalTip() {
   const total = (totalNum * tip) / payeesNum;
   return total.toFixed(2);
 }
+function getResponse() {
+  const total = getTotalShare();
+  const expensive = ['Ouch', 'What much money do you make?!', 'High roller, eh?'];
+  const reasonable = ['Not bad', 'You wont break the bank with this', 'Reasonable'];
+  const cheap = ['You seriously needed a calculator for this?', 'Are you splitting a Mcdonalds order?', 'Live a little next time'];
 
+  if (total <= 15) {
+    DOM.responseComment.innerText = cheap[Math.floor(Math.random() * cheap.length)];
+  } else if (total <= 70) {
+    DOM.responseComment.innerText = reasonable[Math.floor(Math.random() * reasonable.length)];
+  } else {
+    DOM.responseComment.innerText = expensive[Math.floor(Math.random() * expensive.length)];
+  }
+}
 function domChanges() {
   DOM.responseShare.innerText = getTotalShare();
   DOM.responseBase.innerText = getTotalBase();
   DOM.responseTip.innerText = getTotalTip();
+  getResponse();
 }
 
 DOM.button.addEventListener('click', domChanges);
