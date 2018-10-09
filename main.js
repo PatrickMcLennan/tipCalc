@@ -69,11 +69,10 @@ function getResponse() {
   }
 }
 
-function showResults() {
+function swivel() {
   const { results: results, form: form } = DOM;
-  results.style.display = 'flex';
-  results.style.transform = 'scaleX(1)';
-  results.style.opacity = '1';
+  form.classList.toggle('moveLeft');
+  results.classList.toggle('moveLeft');
 }
 
 function showRamble() {
@@ -111,14 +110,14 @@ function showRamble() {
     rambleOne.innerText = maxTipPercent[Math.floor(Math.random() * maxTipPercent.length)];
     rambleTwo.innerText = maxTip[Math.floor(Math.random() * maxTip.length)];
   }
-};
+}
 
 function domChanges() {
   DOM.responseShare.innerText = getTotalShare();
   DOM.responseBase.innerText = getTotalBase();
   DOM.responseTip.innerText = getTotalTip();
   getResponse();
-  showResults();
+  swivel();
   showRamble();
 }
 
