@@ -83,13 +83,13 @@ function showRamble() {
   const maxTip = ['That\'s some mighty fine tippin\'', 'Trying to buy some good karma?', 'This means you\'re probably an alright person'];
   const maxTipPercent = ['You\'re tipping 25%.  Hat\'s off to ya.', 'You\'ve deemed the service worthy of a 25% tip.'];
 
-  const greatTip = ['Seems like you had a good time.', 'That\'s a respectable tip'];
-  const greatTipPercent = ['You\'re tipping 20%.', '20% tip - that\'s npot bad at all.'];
+  const greatTip = ['Seems like you had a good time.', 'That\'s respectable.'];
+  const greatTipPercent = ['You\'re tipping 20%.', '20% tip.'];
 
   const avgTip = ['That\'s average, but still on the lower side', 'That\'s kinda low these days'];
   const avgTipPercent = ['You\'re leaving 15%', '15%.  Not too hot.'];
 
-  const cheapTip = ['Think about that for a second.', 'Your tip is pretty low.  Do with that what you will.'];
+  const cheapTip = ['Think about that before you pull the trigger.', 'Your tip is pretty low.  Do with that what you will.'];
   const cheapTipPercent = ['You\'re giving 10%.  Not a whole lot.', '10% tip.'];
 
   const noTip = ['Some deem this unforgivable.', 'You need to really think about doing this.', 'That is aggresive.'];
