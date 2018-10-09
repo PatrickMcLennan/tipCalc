@@ -144,10 +144,12 @@ span {
   }
 }
 
-button {
+button,
+input[type=submit] {
   @include button;
   background: none;
   border-radius: 2.5%;
+  border: 1px solid white;
   padding: 1rem 2rem;
   cursor: pointer;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);

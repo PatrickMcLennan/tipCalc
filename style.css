@@ -177,7 +177,8 @@ span {
     margin-top: .5rem;
     background: white; }
 
-button {
+button,
+input[type=submit] {
   font-size: 2rem;
   font-weight: 100;
   text-transform: uppercase;
@@ -186,13 +187,16 @@ button {
           filter: drop-shadow(1rem 1rem 0.5rem black);
   background: none;
   border-radius: 2.5%;
+  border: 1px solid white;
   padding: 1rem 2rem;
   cursor: pointer;
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1); }
-  button:hover {
+  button:hover,
+  input[type=submit]:hover {
     -webkit-transform: scale(1.05);
             transform: scale(1.05); }
-  button:active {
+  button:active,
+  input[type=submit]:active {
     -webkit-transform: scale(0.95);
             transform: scale(0.95); }
 
