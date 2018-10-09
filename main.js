@@ -11,6 +11,8 @@ const DOM = {
   responseComment: document.querySelector('.results__response'),
   responseBase: document.querySelector('.totalBase'),
   responseTip: document.querySelector('.totalTip'),
+  tipRambleOne: document.querySelector('.tipRambleOne'),
+  tipRambleTwo: document.querySelector('.tipRambleTwo'),
 };
 
 function rateService(service) {
@@ -74,12 +76,31 @@ function showResults() {
   results.style.opacity = '1';
 }
 
+function showRamble() {
+  const { tipRambleOne: rambleOne, tipRambleTwo: rambleTwo } = DOM;
+  const tip = rateService(DOM.inputService.value);
+  const highTip = ["That's a pretty decent tip", 'Nice payday for the server'];
+  const cheapTip = ["That's a low tip.  Think about that.", 'Your tip is on the low side.  Do with that what you will.'];
+  const noTip = ["You're not giving a tip at all.  Some deem this unforgivable.", 'Based on how bad you thought the service was, there\'s no tip.'];
+  if (tip === 0) {
+    rambleOne.innerText = noTip[Math.floor(Math.random() * noTip.length)];
+    rambleTwo.innerText = noTip[Math.floor(Math.random() * noTip.length)];
+  } else if (tip === .15) {
+    rambleOne.innerText = cheapTip[Math.floor(Math.random() * cheapTip.length)];
+    rambleTwo.innerText = cheapTip[Math.floor(Math.random() * cheapTip.length)];
+  } else if (tip === .25) {
+    rambleOne.innerText = highTip[Math.floor(Math.random() * highTip.length)];
+    rambleTwo.innerText = highTip[Math.floor(Math.random() * highTip.length)];
+  }
+};
+
 function domChanges() {
   DOM.responseShare.innerText = getTotalShare();
   DOM.responseBase.innerText = getTotalBase();
   DOM.responseTip.innerText = getTotalTip();
   getResponse();
   showResults();
+  showRamble();
 }
 
 DOM.button.addEventListener('click', domChanges);
