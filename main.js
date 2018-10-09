@@ -79,17 +79,19 @@ function showResults() {
 function showRamble() {
   const { tipRambleOne: rambleOne, tipRambleTwo: rambleTwo } = DOM;
   const tip = rateService(DOM.inputService.value);
-  const highTip = ["That's a pretty decent tip", 'Nice payday for the server'];
-  const cheapTip = ["That's a low tip.  Think about that.", 'Your tip is on the low side.  Do with that what you will.'];
+  const highTip = ['That\'s some mighty fine tippin\'', 'Trying to buy some good karma?', 'This means you\'re probably an alright person'];
+  const highTipPercent = ['You\'re tipping 25%.  Hat\'s off to ya.', 'You\'ve deemed the service worthy of a 25% tip.'];
+  const cheapTip = ['Think about that for a second.', 'Your tip is pretty low.  Do with that what you will.'];
+  const cheapTipPercent = ['You\'re giving 10%.  Not a whole lot.', '10% tip.'];
   const noTip = ["You're not giving a tip at all.  Some deem this unforgivable.", 'Based on how bad you thought the service was, there\'s no tip.'];
   if (tip === 0) {
     rambleOne.innerText = noTip[Math.floor(Math.random() * noTip.length)];
     rambleTwo.innerText = noTip[Math.floor(Math.random() * noTip.length)];
-  } else if (tip === .15) {
-    rambleOne.innerText = cheapTip[Math.floor(Math.random() * cheapTip.length)];
+  } else if (tip === 0.1) {
+    rambleOne.innerText = cheapTipPercent[Math.floor(Math.random() * cheapTipPercent.length)];
     rambleTwo.innerText = cheapTip[Math.floor(Math.random() * cheapTip.length)];
-  } else if (tip === .25) {
-    rambleOne.innerText = highTip[Math.floor(Math.random() * highTip.length)];
+  } else if (tip === 0.25) {
+    rambleOne.innerText = highTipPercent[Math.floor(Math.random() * highTipPercent.length)];
     rambleTwo.innerText = highTip[Math.floor(Math.random() * highTip.length)];
   }
 };
