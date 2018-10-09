@@ -79,20 +79,37 @@ function showResults() {
 function showRamble() {
   const { tipRambleOne: rambleOne, tipRambleTwo: rambleTwo } = DOM;
   const tip = rateService(DOM.inputService.value);
-  const highTip = ['That\'s some mighty fine tippin\'', 'Trying to buy some good karma?', 'This means you\'re probably an alright person'];
-  const highTipPercent = ['You\'re tipping 25%.  Hat\'s off to ya.', 'You\'ve deemed the service worthy of a 25% tip.'];
+
+  const maxTip = ['That\'s some mighty fine tippin\'', 'Trying to buy some good karma?', 'This means you\'re probably an alright person'];
+  const maxTipPercent = ['You\'re tipping 25%.  Hat\'s off to ya.', 'You\'ve deemed the service worthy of a 25% tip.'];
+
+  const greatTip = ['Seems like you had a good time.', 'That\'s a respectable tip'];
+  const greatTipPercent = ['You\'re tipping 20%.', '20% tip - that\'s npot bad at all.'];
+
+  const avgTip = ['That\'s average, but still on the lower side', 'That\'s kinda low these days'];
+  const avgTipPercent = ['You\'re leaving 15%', '15%.  Not too hot.'];
+
   const cheapTip = ['Think about that for a second.', 'Your tip is pretty low.  Do with that what you will.'];
   const cheapTipPercent = ['You\'re giving 10%.  Not a whole lot.', '10% tip.'];
-  const noTip = ["You're not giving a tip at all.  Some deem this unforgivable.", 'Based on how bad you thought the service was, there\'s no tip.'];
+
+  const noTip = ['Some deem this unforgivable.', 'You need to really think about doing this.', 'That is aggresive.'];
+  const noTipPercent = ['That\'s a 0% tip.', 'Tip = 0%.  You sure?'];
+
   if (tip === 0) {
-    rambleOne.innerText = noTip[Math.floor(Math.random() * noTip.length)];
+    rambleOne.innerText = noTipPercent[Math.floor(Math.random() * noTipPercent.length)];
     rambleTwo.innerText = noTip[Math.floor(Math.random() * noTip.length)];
-  } else if (tip === 0.1) {
+  } else if (tip <= 0.1) {
     rambleOne.innerText = cheapTipPercent[Math.floor(Math.random() * cheapTipPercent.length)];
     rambleTwo.innerText = cheapTip[Math.floor(Math.random() * cheapTip.length)];
+  } else if (tip === 0.15) {
+    rambleOne.innerText = avgTipPercent[Math.floor(Math.random() * avgTipPercent.length)];
+    rambleTwo.innerText = avgTip[Math.floor(Math.random() * avgTip.length)];
+  } else if (tip === 0.2) {
+    rambleOne.innerText = greatTipPercent[Math.floor(Math.random() * greatTipPercent.length)];
+    rambleTwo.innerText = greatTip[Math.floor(Math.random() * greatTip.length)];
   } else if (tip === 0.25) {
-    rambleOne.innerText = highTipPercent[Math.floor(Math.random() * highTipPercent.length)];
-    rambleTwo.innerText = highTip[Math.floor(Math.random() * highTip.length)];
+    rambleOne.innerText = maxTipPercent[Math.floor(Math.random() * maxTipPercent.length)];
+    rambleTwo.innerText = maxTip[Math.floor(Math.random() * maxTip.length)];
   }
 };
 
