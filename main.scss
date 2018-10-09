@@ -47,13 +47,8 @@ form,
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 
   @include respond(tab-port) {
-    padding: 5vh 3vw;
+    min-height: 100vh;
   }
-}
-.results {
-  display: none;
-  transform: scaleX(0);
-  opacity: 0;
 }
   //  FORM
 .header {
@@ -104,38 +99,20 @@ select {
   margin-top: 5rem;
 }
 
-button {
-  @include button;
-  background: none;
-  border-radius: 2.5%;
-  padding: 1rem 2rem;
-  cursor: pointer;
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-
-  &:hover {
-    transform: scale(1.05);
-  }
-  &:active {
-    transform: scale(0.95);
-  }
-}
-  // RESULTS
+// RESULTS
 .results {
 
   & h3 {
     @include shareTotal;
-    flex: 1;
   }
 
   &__response {
     @include response;
     margin-left: 1rem;
-    flex: 1;
   }
 
   & ul {
     display: flex;
-    flex: 1;
     flex-direction: column;
     justify-content: space-evenly;
     list-style-type: none;
@@ -167,11 +144,35 @@ span {
   }
 }
 
+button {
+  @include button;
+  background: none;
+  border-radius: 2.5%;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
 
 .moveRight {
-  transform: translateX(100%);
+  transform: translate(100%, 0);
+
+  @include respond(tab-port) {
+    transform: translate(0, 100%);
+  }
 }
 
 .moveLeft {
-  transform: translateX(-100%);
+  transform: translate(-100%, 0);
+
+  @include respond(tab-port) {
+    transform: translate(0, -100%);
+  }
 }

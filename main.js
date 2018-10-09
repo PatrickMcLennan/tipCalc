@@ -5,7 +5,8 @@ const DOM = {
   inputTotal: document.querySelector('.inputTotal'),
   inputService: document.querySelector('.service'),
   inputPeople: document.querySelector('.inputPeople'),
-  button: document.querySelector('button'),
+  goButton: document.querySelector('.goBtn'),
+  returnButton: document.querySelector('.returnBtn'),
   results: document.querySelector('.results'),
   responseShare: document.querySelector('.totalShare'),
   responseComment: document.querySelector('.results__response'),
@@ -69,9 +70,18 @@ function getResponse() {
   }
 }
 
-function swivel() {
+function swivelLeft() {
   const { results: results, form: form } = DOM;
   form.classList.toggle('moveLeft');
+  form.classList.toggle('moveRight');
+  results.classList.toggle('moveLeft');
+  results.classList.toggle('moveRight');
+}
+function swivelRight() {
+  const { results: results, form: form } = DOM;
+  form.classList.toggle('moveRight');
+  form.classList.toggle('moveLeft');
+  results.classList.toggle('moveRight');
   results.classList.toggle('moveLeft');
 }
 
@@ -117,8 +127,9 @@ function domChanges() {
   DOM.responseBase.innerText = getTotalBase();
   DOM.responseTip.innerText = getTotalTip();
   getResponse();
-  swivel();
+  swivelLeft();
   showRamble();
 }
 
-DOM.button.addEventListener('click', domChanges);
+DOM.goButton.addEventListener('click', domChanges);
+DOM.returnButton.addEventListener('click', swivelRight);
