@@ -1,6 +1,6 @@
 @import 'queries';
 @import 'typo';
-
+@import 'logo/nav';
 *,
 *::before,
 *::after {
@@ -9,7 +9,6 @@
   box-sizing: inherit;
   font-family: 'Lato';
   color: white;
-  // filter: drop-shadow(.5rem .5rem .25rem black);
 }
 input[type=number]::-webkit-inner-spin-button,
 input[type=number]::-webkit-outer-spin-button {
@@ -50,7 +49,7 @@ form,
     min-height: 100vh;
   }
 }
-  //  FORM
+//  FORM
 .header {
   @include headerMain;
   position: absolute;
