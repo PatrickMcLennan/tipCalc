@@ -9,6 +9,7 @@ nav {
     flex-direction: column;
     align-items: flex-end;
     justify-content: space-evenly;
+    z-index: 9999;
 
     .logo {
         height: 6vh;
@@ -46,8 +47,8 @@ nav {
     }
     li {
         list-style-type: none;
-        height: 5vh;
-        width: 5vw;
+        height: 4.5vh;
+        width: 4.5vw;
         margin: 1vh 0;
         transform-origin: 100%;
         transform: scaleX(0);
@@ -65,10 +66,10 @@ nav {
             transition-delay: .4s;
         }
     }
-}
-nav:hover .logo .logo__p {
+    &:hover .logo__p {
     transform: rotateY(0) translateX(0);
-}
-nav:hover ul li {
-    transform: scaleX(1);
+    }
+    &:hover ul li {
+      transform: scaleX(1);
+    }
 }
